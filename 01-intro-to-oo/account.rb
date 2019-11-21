@@ -26,40 +26,30 @@ bank_accounts = [{"owner_name": "soundarya", "balance": 100, due_date: "12/25/20
 class BankAccount
     attr_reader(:owner_name, :due_date) #(41-52)
     attr_accessor(:balance) #(55-57)
-    #attr_accessor which does both
 
+    @@bank_accounts = [ ]
+    #instance method
     def initialize(owner_name, balance, due_date)
-        # local variable.
-        #scope? go through certain levels.
-        # global, local -> 
-        # access 
         @owner_name = owner_name
         @balance = balance
         @due_date = due_date
+        @@bank_accounts << self
         # binding.pry
     end
 
-    #return the variable to the user
-    # def owner_name
-    #     @owner_name
-    # end
+    ## CLASS METHOD -> with the self keyword
+    def self.bank_accounts
+        # binding.pry
+        @@bank_accounts
+    end
 
-    # def balance
-    #     @balance
-    # end
+    def self.whale
+        # largets balance -> object which is account BankAccount
+        # how can I get access to balance
+        @@bank_accounts.max_by { |bank_account| bank_account.balance }
+    end
 
-    # def due_date
-    #     @due_date
-    # end
-
-    #these are writer methods
-    # def balance=(new_balance)
-    #     @balance = new_balance
-    # end
 end
-# owner_name: string
-# balance: integer
-# due_date: string
 
 bank_accounts.each do |bank_account| 
     # binding.pry

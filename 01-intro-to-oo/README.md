@@ -2,6 +2,11 @@
 # SWBAT - Students Will Be Able To
 # Questions:
 - What is the different from a local/class/CONSTANT/global
+    - lab question: email parser : what is the solution
+        - some text and parse out all the emails
+        - "(a-z9-0)+@(a-z9-0)+.com", ""
+        - split
+    - 
 
 ## Objectives
 

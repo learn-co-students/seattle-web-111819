@@ -1,0 +1,28 @@
+require_relative 'config/environment'
+
+desc "Prints hello world"
+task :hello_world do 
+    puts "Hello world"
+end
+
+desc "starts a console session"
+task :console do
+    coffee_dad = User.insert_data("Coffee Dad")
+    
+    tea_uncle = User.insert_data("Tea Uncle")
+    sound = User.insert_data("Donut Mom")
+
+    user = User.all.first
+
+    t1 = Tweet.insert_data("Coffeee is amazing", coffee_dad)
+    t2 = Tweet.insert_data("Coffeee is ok", tea_uncle)
+    t3 = Tweet.insert_data("Coffeee is weird", tea_uncle)
+
+
+    # l1 = Like.new(sound, t1)
+    # Like.new(sound, t2 )
+    # Like.new(sound, t3 )
+    # Like.new(coffee_dad, t1)
+    # Like.new(tea_uncle, t2)
+    Pry.start
+end

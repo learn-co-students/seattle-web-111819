@@ -1,0 +1,1 @@
+Adapter::GoogleBooks.new("J.K Rowling").fetch_books

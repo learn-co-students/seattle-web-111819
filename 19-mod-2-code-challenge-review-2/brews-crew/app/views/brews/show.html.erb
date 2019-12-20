@@ -1,0 +1,12 @@
+<h1>Brew#show</h1>
+<p>Find me in app/views/brew/show.html.erb</p>
+
+<%= @brew.blend_name %> <br>
+<%= @brew.origin %> <br>
+<%= @brew.notes %> <br>
+<%= @brew.strength %> <br> <br>
+<% @brew.purchases.each do |purchase| %>
+    <%= purchase.customer_name %> <br>
+<% end %>
+<%#= button_to "Delete", brew_path(@brew), method: :delete %>
+<%#= button_to "Edit", edit_brew_path(@brew), method: :get%>

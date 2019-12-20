@@ -1,0 +1,6 @@
+<h1>Brew#index</h1>
+<p>Find me in app/views/brew/index.html.erb</p>
+<% @brews.each do |brew| %>
+    <%= link_to brew.blend_name, brew_path(brew) %>
+    <%= button_to "Delete", brew_path(brew), method: :delete %>
+<% end %>

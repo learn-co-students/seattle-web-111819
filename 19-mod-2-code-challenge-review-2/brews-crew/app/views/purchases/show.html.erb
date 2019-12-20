@@ -1,0 +1,8 @@
+<h1>Brew#show</h1>
+<p>Find me in app/views/brew/show.html.erb</p>
+
+<%= @purchase.customer_name %> <br>
+<%= @purchase.price %> <br>
+<%= link_to @purchase.brew.blend_name, brew_path(@purchase.brew)%>
+<%= button_to "Delete", purchase_path(@purchase), method: :delete %>
+<%= button_to "Edit", edit_purchase_path(@purchase), method: :get%>

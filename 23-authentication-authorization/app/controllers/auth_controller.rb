@@ -3,7 +3,7 @@ class AuthController < ApplicationController
     end
 
     def verify
-        # byebugs
+        # byebug
         teacher = Teacher.find_by(username: params[:auth][:username])
         if teacher && teacher.authenticate(params[:auth][:password])
             session[:teacher_id] = teacher.id

@@ -3,9 +3,9 @@ class AuthController < ApplicationController
     end
 
     def verify
-        # byebug
+        # byebugs
         teacher = Teacher.find_by(username: params[:auth][:username])
-        if teacher
+        if teacher && teacher.authenticate(params[:auth][:password])
             session[:teacher_id] = teacher.id
             redirect_to :root
         else

@@ -21,18 +21,10 @@ class StudentsController < ApplicationController
     else
       render :new
     end
-
   end
 
   private
   def student_params
     params.require(:student).permit(:name, :email, :cohort_id)
-  end
-
-  def require_login
-    if !session[:teacher_id]
-      flash[:message] = "PLEASE LOGIN"
-      redirect_to login_path
-    end
   end
 end

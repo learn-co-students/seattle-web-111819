@@ -4,7 +4,7 @@ class TeachersController < ApplicationController
     end
 
     def create
-        # byebug
+        byebug
         @teacher = Teacher.new(teacher_params)
         if @teacher.save            
             # cookies[:teacher_id] = @teacher.id
@@ -18,6 +18,6 @@ class TeachersController < ApplicationController
 
     private
     def teacher_params
-        params.require(:teacher).permit(:username)
+        params.require(:teacher).permit(:username, :password, :password_confirmation)
     end
 end

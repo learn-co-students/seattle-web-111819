@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # resources :teachers
+  resources :teachers
   resources :students, only: [:show, :new, :index, :create]
+  
   root to: "students#index"
 
   get '/login', to: "auth#login"

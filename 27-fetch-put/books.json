@@ -1,0 +1,10 @@
+{
+  "books": [
+    {
+      "title": "Game of Thrones",
+      "author": "GRR Martin",
+      "img": "https://marketplace.canva.com/MADOPt_vsnI/1/0/thumbnail_large-1/canva-yellow-lemon-children-book-cover-MADOPt_vsnI.jpg",
+      "id": 2
+    }
+  ]
+}

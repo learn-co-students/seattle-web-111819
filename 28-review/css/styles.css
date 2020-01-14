@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(208, 208, 235);
+}
+
+.header-bar {
+    background-color: beige;
+    color: black;
+    text-align: center;
+    padding: 12px;
+}
+
+.main {
+    background-color: darkblue;
+}
+
+#answer {
+    display:none;
+}
